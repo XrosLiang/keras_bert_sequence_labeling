@@ -56,7 +56,7 @@ for key, value in {'CRF': CRF, 'crf_loss': crf_loss, 'crf_accuracy': crf_accurac
 model = load_model("%s_ner.h5" % event_type, custom_objects=custom_objects)
 
 # 测试句子
-text = "台湾“立法院”“莱猪（含莱克多巴胺的猪肉）”表决大战落幕，台当局领导人蔡英文24日晚在脸书发文宣称，“开放市场的决定，将会是未来台湾国际经贸走向世界的关键决定”。"
+text = "经过工作人员两天的反复验证、严密测算，记者昨天从上海中心大厦得到确认：被誉为上海中心大厦“定楼神器”的阻尼器，在8月10日出现自2016年正式启用以来的最大摆幅。"
 word_labels, seq_types = PreProcessInputData([text])
 
 # 模型预测
