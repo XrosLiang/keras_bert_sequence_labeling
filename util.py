@@ -8,8 +8,9 @@
 event_type = "example"
 
 train_file_path = "./data/%s.train" % event_type
-dev_file_path = "./data/%s.dev" % event_type
 test_file_path = "./data/%s.test" % event_type
 
 # 模型相关的配置
 MAX_SEQ_LEN = 128   # 输入的文本最大长度
+BATCH_SIZE = 32     # 模型训练的BATCH SIZE
+EPOCH = 10          # 模型训练的轮次

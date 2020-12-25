@@ -37,7 +37,6 @@ def read_data(file_path):
     sentences = [_ for _ in sentences if _]
     tags = [_ for _ in tags if _]
 
-    # data = [(sent, tag) for sent, tag in zip(sentences, tags)]
     return sentences, tags
 
 
@@ -45,8 +44,7 @@ def read_data(file_path):
 # 将标签转换成id
 def label2id():
 
-    train_data = read_data(train_file_path)
-    train_tags = [_[1] for _ in train_data]
+    _, train_tags = read_data(train_file_path)
 
     # 标签转换成id，并保存成文件
     unique_tags = []

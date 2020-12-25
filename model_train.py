@@ -8,7 +8,7 @@ from keras.callbacks import ReduceLROnPlateau
 from keras_bert import Tokenizer
 
 from util import event_type
-from util import MAX_SEQ_LEN, train_file_path, test_file_path
+from util import MAX_SEQ_LEN, BATCH_SIZE, EPOCH, train_file_path, test_file_path
 from load_data import read_data
 from model import BertBilstmCRF
 
@@ -21,8 +21,6 @@ id_label_dict = {v: k for k, v in label_id_dict.items()}
 
 
 # 载入数据
-EPOCH = 10
-BATCH_SIZE = 32
 config_path = './chinese_L-12_H-768_A-12/bert_config.json'
 checkpoint_path = './chinese_L-12_H-768_A-12/bert_model.ckpt'
 dict_path = './chinese_L-12_H-768_A-12/vocab.txt'
