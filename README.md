@@ -6,7 +6,7 @@
 
 ### 数据集
 
-example数据集，共三种标签：LOC, PER, ORG
+人民日报命名实体识别数据集（example.train和example.test），共三种标签：LOC, PER, ORG
 
 ### 模型结构
 
@@ -32,19 +32,19 @@ Non-trainable params: 0
 
 ### 模型效果
 
-模型参数：MAX_SEQ_LEN=128, BATCH_SIZE=32, EPOCH=1
+模型参数：MAX_SEQ_LEN=128, BATCH_SIZE=32, EPOCH=10
 
 运行model_evaluate.py,模型评估结果如下：
 
 ```
            precision    recall  f1-score   support
 
-      ORG     0.7799    0.8577    0.8169      2185
-      LOC     0.8942    0.8893    0.8917      3658
-      PER     0.9564    0.9308    0.9434      1864
+      LOC     0.9330    0.8986    0.9155      3658
+      ORG     0.8881    0.8902    0.8891      2185
+      PER     0.9692    0.9469    0.9579      1864
 
-micro avg     0.8736    0.8904    0.8819      7707
-macro avg     0.8768    0.8904    0.8830      7707
+micro avg     0.9287    0.9079    0.9182      7707
+macro avg     0.9291    0.9079    0.9183      7707
 ```
 
 ### 模型预测示例
@@ -87,7 +87,7 @@ macro avg     0.8768    0.8904    0.8830      7707
 0. 将BERT中文预训练模型chinese_L-12_H-768_A-12放在chinese_L-12_H-768_A-12文件夹下
 1. 运行load_data.py，生成类别标签，注意O标签为0;
 2. 所需Python第三方模块参考requirements.txt文档
-3. 自己需要分类的数据按照data/example.train和example.test的格式准备好
+3. 自己需要分类的数据按照data/example.train和data/example.test的格式准备好
 4. 调整模型参数，运行model_train.py进行模型训练
 5. 运行model_evaluate.py进行模型评估
 6. 运行model_predict.py对新文本进行预测

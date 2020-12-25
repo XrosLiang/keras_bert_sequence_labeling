@@ -21,7 +21,7 @@ id_label_dict = {v: k for k, v in label_id_dict.items()}
 
 
 # 载入数据
-EPOCH = 1
+EPOCH = 10
 BATCH_SIZE = 32
 config_path = './chinese_L-12_H-768_A-12/bert_config.json'
 checkpoint_path = './chinese_L-12_H-768_A-12/bert_model.ckpt'

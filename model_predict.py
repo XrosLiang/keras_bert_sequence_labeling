@@ -56,8 +56,7 @@ for key, value in {'CRF': CRF, 'crf_loss': crf_loss, 'crf_accuracy': crf_accurac
 model = load_model("%s_ner.h5" % event_type, custom_objects=custom_objects)
 
 # 测试句子
-text = "最近一段时间，印度政府在南海问题上接连发声。在近期印度、越南两国举行的线上总理峰会上，印度总理莫迪声称南海行为准则“不应损害该地区其他" \
-       "国家或第三方的利益”，两国总理还强调了所谓南海“航行自由”的重要性。"
+text = "台湾“立法院”“莱猪（含莱克多巴胺的猪肉）”表决大战落幕，台当局领导人蔡英文24日晚在脸书发文宣称，“开放市场的决定，将会是未来台湾国际经贸走向世界的关键决定”。"
 word_labels, seq_types = PreProcessInputData([text])
 
 # 模型预测
