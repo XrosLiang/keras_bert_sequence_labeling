@@ -37,6 +37,7 @@ def read_data(file_path):
     sentences = [_ for _ in sentences if _]
     tags = [_ for _ in tags if _]
 
+    # data = [(sent, tag) for sent, tag in zip(sentences, tags)]
     return sentences, tags
 
 
@@ -45,15 +46,17 @@ def read_data(file_path):
 def label2id():
 
     _, train_tags = read_data(train_file_path)
+    # train_tags = [_[1] for _ in train_data]
 
     # 标签转换成id，并保存成文件
     unique_tags = []
     for seq in train_tags:
         for _ in seq:
-            if _ not in unique_tags:
+            if _ not in unique_tags and _ != "O":
                 unique_tags.append(_)
 
-    label_id_dict = dict(zip(unique_tags, range(len(unique_tags))))
+    label_id_dict = {"O": 0}
+    label_id_dict.update(dict(zip(unique_tags, range(1, len(unique_tags)+1))))
 
     with open("%s_label2id.json" % event_type, "w", encoding="utf-8") as g:
         g.write(json.dumps(label_id_dict, ensure_ascii=False, indent=2))

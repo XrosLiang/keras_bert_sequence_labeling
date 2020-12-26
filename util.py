@@ -5,7 +5,7 @@
 # @Place : Yangpu, Shanghai
 
 # 数据相关的配置
-event_type = "example"
+event_type = "time"
 
 train_file_path = "./data/%s.train" % event_type
 test_file_path = "./data/%s.test" % event_type

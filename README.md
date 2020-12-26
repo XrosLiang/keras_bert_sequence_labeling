@@ -6,7 +6,7 @@
 
 ### 数据集
 
-1. 人民日报命名实体识别数据集（example.train和example.test），共3种标签：LOC, PER, ORG
+1. 人民日报命名实体识别数据集（example.train 28046条数据和example.test 4636条数据），共3种标签：地点（LOC）, 人名（PER）, 组织机构（ORG）
 2. 时间识别数据集（time.train 1700条数据和time.test 300条数据），共1种标签：TIME
 3. CLUENER细粒度实体识别数据集（cluener.train 10748条数据和cluener.test 1343条数据），共10种标签：地址（address），书名（book），公司（company），游戏（game），政府（goverment），电影（movie），姓名（name），组织机构（organization），职位（position），景点（scene）
 
